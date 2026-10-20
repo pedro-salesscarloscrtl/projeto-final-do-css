@@ -1,0 +1,65 @@
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+header{
+    background-color: black;
+    /* ativa o css grid para organizar os elementos */
+    display: grid;
+    /* cria duas colunas 
+    a primeira ocupa 1 fraçao do espaço
+    a segunda ocupa 2 fraçao do espaço  */
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;/*3 colunas*/
+    gap: 15px;
+}
+nav a{
+    color: brown;
+}
+.cavaleiros{
+    display: grid;/* ativa o grid */
+    grid-template-columns: 1fr 1fr 1fr;/* define o numeros de colunas */
+    gap: 20px;/* cria um espaço */
+    padding: 20px;
+}
+.card{
+    background-color: blueviolet;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+/* RESPONSIVIDADE: É a capacidade de uma página da internet ou aplicativo ajustar automaticamente seu layout, imagens e elementos visuais para oferecer uma boa experiência de leitura e navegação em qualquer aparelho, como celulares, tablets, laptops e monitores 
+grandes. */
+
+/* media query para tablets */
+@media(max-width:800px){
+    .cavaleiros{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* media query para celular */
+@media(max-width:500px){
+    header{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 15px;
+    }
+    nav{
+        justify-content: center;
+    }
+    .cavaleiros{
+        grid-template-columns: 1fr;
+    }
+}

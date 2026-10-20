@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: darkgreen;
+            height: 700px;
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr;
+            gap: 20px;
+            justify-content: center;
+            align-items: stretch;
+        }
+        .card{
+            background-color: dimgray;
+            height: 200px;
+        }
+        @media(max-width:800px){
+            .card{
+                background-color: indigo;
+                font-size: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">pedro</div>
+        <div class="card">pedro</div>
+        <div class="card">pedro</div>
+        <div class="card">pedro</div>
+        <div class="card">pedro</div>
+        <div class="card">pedro</div>
+    </div>
+    
+</body>
+</html>
